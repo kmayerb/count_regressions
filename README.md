@@ -13,10 +13,9 @@ In these models `W` refers to counts of a certain type
 
 `M` refers to the total counts present in a sample. 
 
-In our outputs these are represented by `MEM+` and ('MEM+' + 'MEM-'). 
-The columns containing 'MEM+' and 'MEM-' values can be respecified with the 
-`-p, --positive` and `-n, --negative` flags, respectively.
-
+In our typical inputs `W` and `M` are represented by `MEM+` and (`MEM+` + `MEM-`). 
+The columns containing 'MEM+' and 'MEM-' values can be respecified, if named different,
+ with the `-p, --positive` and `-n, --negative` flags, respectively.
 
 ## Scripts
 
