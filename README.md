@@ -1,6 +1,6 @@
 # count_regressions
 
-Access R Count Regression Model as Command Line Scripts
+Access R Count Regression Models as Command Line Scripts
 
 The scripts run many counts regression, one feature at a time.
 Script is intended to process a single tabular 
