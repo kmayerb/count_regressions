@@ -16,7 +16,7 @@ the following:
 * magrittr >= 1.5.0
 * corncob >= 1.0.0
 
-### Binomial Models
+### Binomial Models -- Mean (`cbind(W, M-W) ~ Covariates`)
 
 ```bash
 RScript binomial_regressions.R --help
@@ -69,7 +69,7 @@ RScript binomial_regressions.R \
 ```
 
 
-### Beta-Binomial Model 
+### Beta-Binomial Model -- Mean(`cbind(W, M-W) ~ Covariates`) + Dispersion (`~1`)
 
 #### Options
 
