@@ -75,7 +75,6 @@ possibly_do_corncob = purrr::possibly(do_corncob, otherwise = NA)
 # PREFORMAT()
 dfsr = purrr::map(dfs, ~preformat(.x))
 # BETA-BIONOMIAL REGRESSOINS
-list_of_fit_models    = purrr::map(dfsr, ~do_corncob(mydata = .x, frm = as.formula(frm)))
 list_of_fit_models    = purrr::map(dfsr, ~possibly_do_corncob(mydata = .x, frm = as.formula(frm)))
                                    
 list_of_fit_models    = list_of_fit_models[!is.na(list_of_fit_models)]
