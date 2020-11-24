@@ -23,7 +23,7 @@ The columns containing 'MEM+' and 'MEM-' values can be respecified, if named dif
 
 These examples were tested in an R environment with 
 the following:
-
+* optparse
 * dplyr >= 0.8.3
 * tidyr >= 1.1.0
 * purrr >= 0.3.2
