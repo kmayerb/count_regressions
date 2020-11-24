@@ -2,11 +2,27 @@
 
 Access R Count Regression Model as Command Line Scripts
 
+The scripts run many counts regression, one feature at a time.
+Script is intended to process a single tabular 
+set of features. The flag `-c` specifies the column 
+used to split data by feature. All results are 
+appended and returned as a single tabular output.
+
+In these models `W` refers to counts of a certain type 
+(i.e., all TCRs in a sample spanned by a meta-clonotype, or all OTUs of a particular genus). 
+
+`M` refers to the total counts present in a sample. 
+
+In our outputs these are represented by `MEM+` and ('MEM+' + 'MEM-'). 
+The columns containing 'MEM+' and 'MEM-' values can be respecified with the 
+`-p, --positive` and `-n, --negative` flags, respectively.
+
+
 ## Scripts
 
 ### Dependencies 
 
-These exampler were tested in an R environment with 
+These examples were tested in an R environment with 
 the following:
 
 * dplyr >= 0.8.3
@@ -16,7 +32,7 @@ the following:
 * magrittr >= 1.5.0
 * corncob >= 1.0.0
 
-### Binomial Models -- Mean (`cbind(W, M-W) ~ Covariates`)
+### Binomial Model -- Mean (`cbind(W, M-W) ~ Covariates`)
 
 ```bash
 RScript binomial_regressions.R --help
@@ -25,7 +41,7 @@ RScript binomial_regressions.R --help
 ```bash
 Options:
 	-f CHARACTER, --file=CHARACTER
-		dataset file name must be a tab delimitted file, .tsv
+		dataset file name must be a tab delimited file, .tsv
 
 	-c CHARACTER, --clonotype=CHARACTER
 		column designating (meta)clonotypes [default= clone_df_index]
@@ -80,7 +96,7 @@ RScript beta_binomial_regressions.R --help
 ```bash
 Options:
 	-f CHARACTER, --file=CHARACTER
-		dataset file name must be a tab delimitted file, .tsv
+		dataset file name must be a tab delimited file, .tsv
 
 	-c CHARACTER, --clonotype=CHARACTER
 		column designating (meta)clonotypes [default= clone_df_index]

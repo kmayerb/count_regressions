@@ -2,7 +2,7 @@
 library("optparse")
 option_list = list(
   make_option(c("-f", "--file"), type="character", default=NULL, 
-              help="dataset file name must be a tab delimitted file, .tsv ", metavar="character"),
+              help="dataset file name must be a tab delimited file, .tsv ", metavar="character"),
   make_option(c("-c", "--clonotype"), type="character", default='clone_df_index', NULL, 
               help="column designating (meta)clonotypes [default= %default]", metavar="character"),
   make_option(c("-r", "--formula"), type="character", default='cbind(W, M-W) ~ Timepoint + ptid', 
